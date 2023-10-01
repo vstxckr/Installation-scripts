@@ -1,0 +1,16 @@
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
+
+((${+ZSH_HIGHLIGHT_STYLES} )) || typeset -A ZSH_HIGHLIGHT_STYLES
+ZSH_HIGHLIGHT_STYLES[path]=none
+ZSH_HIGHLIGHT_STYLES[path_prefix]=none 
+
+plugins=( 
+    # other plugins...
+    zsh-autosuggestions
+	zsh-syntax-highlighting
+)
+
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=30;46:cd=30;45:su=30;41:sg=30;43:tw=30;42:ow=30;44'
+zstyle ":completion:*:default" list-colors ${(s.:.)LS_COLORS} "ma=48;5;232;1"

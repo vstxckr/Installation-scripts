@@ -1,0 +1,2 @@
+ubuntu 18.04 cannot use drage and drop?
+ubuntu 22.04 need to disable wayland to use drag and drop.
